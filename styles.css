@@ -1,0 +1,341 @@
+/* Material Design styles for AI Sheets Helper */
+
+/* Button styles */
+.ai-sheets-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+}
+
+.ai-sheets-btn:hover {
+  background-color: #1765cc;
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+}
+
+.ai-sheets-btn:active {
+  background-color: #1557b0;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+/* Modal overlay */
+.ai-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal */
+.ai-modal {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  min-width: 500px;
+  max-width: 700px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #202124;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #5f6368;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: #f1f3f4;
+}
+
+/* Modal body */
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modal-content p {
+  margin: 0 0 16px 0;
+  color: #5f6368;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Modal footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.modal-cancel,
+.modal-confirm {
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+}
+
+.modal-cancel {
+  background: white;
+  color: #1a73e8;
+  border: 1px solid #dadce0;
+}
+
+.modal-cancel:hover {
+  background-color: #f8f9fa;
+}
+
+.modal-confirm {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.modal-confirm:hover:not(:disabled) {
+  background-color: #1765cc;
+}
+
+.modal-confirm:disabled {
+  background-color: #dadce0;
+  color: #80868b;
+  cursor: not-allowed;
+}
+
+/* Formula input */
+.formula-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Roboto, Arial, sans-serif;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.formula-input:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+/* Formula preview */
+.formula-preview,
+.fixes-preview {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.formula-preview h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #202124;
+}
+
+.formula-preview code {
+  display: block;
+  padding: 12px;
+  background-color: #e8f0fe;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  color: #1a73e8;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.formula-preview p {
+  margin: 0;
+  color: #5f6368;
+  font-size: 13px;
+}
+
+/* Fixes list */
+.fixes-list h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #202124;
+}
+
+.fixes-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fixes-list li {
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 4px;
+  border-left: 3px solid #1a73e8;
+}
+
+.fixes-list strong {
+  color: #1a73e8;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.fix-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+}
+
+.old-value {
+  color: #d93025;
+  text-decoration: line-through;
+}
+
+.new-value {
+  color: #137333;
+  font-weight: 500;
+}
+
+.arrow {
+  color: #5f6368;
+}
+
+.fixes-list small {
+  display: block;
+  color: #5f6368;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Loader */
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #1a73e8;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success and error messages */
+.success {
+  color: #137333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error {
+  color: #d93025;
+  background-color: #fce8e6;
+  padding: 12px;
+  border-radius: 4px;
+  border-left: 3px solid #d93025;
+}
+
+.error p {
+  margin: 0;
+  color: #d93025;
+}
+
+/* Notification */
+.ai-notification {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #323232;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  z-index: 10001;
+  font-size: 14px;
+  font-family: Roboto, Arial, sans-serif;
+  transition: bottom 0.3s ease;
+}
+
+.ai-notification.show {
+  bottom: 24px;
+}

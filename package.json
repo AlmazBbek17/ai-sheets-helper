@@ -1,0 +1,16 @@
+{
+  "name": "ai-sheets-helper-backend",
+  "version": "1.0.0",
+  "description": "Backend API for AI Sheets Helper Chrome Extension",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  }
+}
